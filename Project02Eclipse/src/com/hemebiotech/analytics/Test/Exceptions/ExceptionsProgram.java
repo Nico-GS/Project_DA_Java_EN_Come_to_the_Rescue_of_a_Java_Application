@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics.Exceptions;
+package com.hemebiotech.analytics.Test.Exceptions;
 
 public class ExceptionsProgram extends Exception{
 
