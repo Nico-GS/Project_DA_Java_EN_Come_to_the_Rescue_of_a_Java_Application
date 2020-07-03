@@ -1,4 +1,4 @@
-package com.hemebiotech.analytics.Test.Write;
+package com.hemebiotech.analytics.Test.write;
 
 public class WriteFile {
 

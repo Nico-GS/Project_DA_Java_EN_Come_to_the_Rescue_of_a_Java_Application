@@ -30,8 +30,8 @@ public class MainAppTest2 {
             BufferedWriter out = new BufferedWriter (writer);
             for (Map.Entry<String, Integer> entry : wordCount.entrySet ()){
                 System.out.println ("Valeur: " + entry.getKey () + "| Occurence: " + entry.getValue ());
-                out.write (entry.getKey () + " " +  entry.getValue () + " \n");
-                out.flush ();
+                out.write (entry.getKey () + " = " +  entry.getValue () + " \n");
+                out.flush (); // Force write
             }
 
         } catch (IOException e) {

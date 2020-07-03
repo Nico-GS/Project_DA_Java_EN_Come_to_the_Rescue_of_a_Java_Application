@@ -13,7 +13,7 @@ public class MainAppWithReadSymptom {
 
         try {
 
-            List<String> liste = test.GetSymptoms ();
+            List<String> liste = test.getSymptoms ();
             Collections.sort (liste);
             System.out.println (liste);
 
