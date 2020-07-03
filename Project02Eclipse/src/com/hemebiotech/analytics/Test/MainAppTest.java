@@ -6,7 +6,7 @@ public class MainAppTest {
 
     public static void main (String[] args) {
 
-        ReadFile test = new ReadFile ();
+        ReadFile file = new ReadFile ();
 
     }
 }

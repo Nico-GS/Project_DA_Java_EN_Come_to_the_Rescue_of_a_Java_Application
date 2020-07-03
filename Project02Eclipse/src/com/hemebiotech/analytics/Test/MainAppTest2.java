@@ -17,17 +17,19 @@ public class MainAppTest2 {
             Map<String, Integer> wordCount = new TreeMap<> ();
             while (scan.hasNext ()) {
                 String word = scan.next ();
-                if (!wordCount.containsKey (word))
+                if (!wordCount.containsKey (word)) {
                     wordCount.put (word, 1);
-                else
+                }
+                else {
                     wordCount.put (word, wordCount.get (word) + 1);
+                }
             }
 
             // Result in console & Write file output
             FileWriter writer = new FileWriter ("resultat2.out");
             BufferedWriter out = new BufferedWriter (writer);
             for (Map.Entry<String, Integer> entry : wordCount.entrySet ()){
-                System.out.println ("Valeur : " + entry.getKey () + "| Occurence : " + entry.getValue ());
+                System.out.println ("Valeur: " + entry.getKey () + "| Occurence: " + entry.getValue ());
                 out.write (entry.getKey () + " " +  entry.getValue () + " \n");
                 out.flush ();
             }
