@@ -1,14 +1,13 @@
 package com.hemebiotech.analytics.Test;
 
-import com.hemebiotech.analytics.Test.read.FileReader;
-import java.io.FileNotFoundException;
+import com.hemebiotech.analytics.Test.read.FileToTreeMap;
 
 public class MainAppTest {
 
-    public static void main (String[] args) throws FileNotFoundException {
+    public static void main (String[] args) {
 
-        FileReader test = new FileReader ();
-        test.readFile ();
+        FileToTreeMap list = new FileToTreeMap ();
+        list.readFile ();
 
     }
 }
