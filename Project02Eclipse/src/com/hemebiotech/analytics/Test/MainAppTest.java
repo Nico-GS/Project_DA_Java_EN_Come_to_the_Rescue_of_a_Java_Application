@@ -2,12 +2,14 @@ package com.hemebiotech.analytics.Test;
 
 import com.hemebiotech.analytics.Test.read.FileToTreeMap;
 
+import java.io.IOException;
+
 public class MainAppTest {
 
     public static void main (String[] args) {
 
-        FileToTreeMap list = new FileToTreeMap ();
-        list.readFile ();
+        FileToTreeMap test = new FileToTreeMap ();
+        System.out.println (test.readFile ());
 
     }
 }
