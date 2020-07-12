@@ -11,8 +11,9 @@ public class ListToTree {
     public Map<String, Integer> readFile ()  {
 
         /**
-         * Méthode readFile instancie ReadSymptomDataFromFile, crée une TreeMap vide,
-         * une list de l'objets
+         * Méthode readFile instancie ReadSymptomDataFromFile, crée une TreeMap vide +
+         * une list de "symptom" et converti tout ça en TreeMap avec la liste des symptomes
+         * et leurs nombres d'occurrences
          * @param
          */
 
@@ -20,7 +21,7 @@ public class ListToTree {
         Map<String, Integer> symptomSort = new TreeMap();
         List list = new ArrayList (symptom.getSymptoms ());
         symptomSort = (Map<String, Integer>)
-                list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                list.stream().collect(Collectors.groupingBy(Function.identity (), Collectors.counting()));
 
         return symptomSort;
 
