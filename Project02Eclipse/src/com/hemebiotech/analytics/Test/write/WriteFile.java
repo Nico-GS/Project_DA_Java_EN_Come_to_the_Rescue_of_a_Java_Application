@@ -12,6 +12,11 @@ public class WriteFile {
     // Write output file
     public void write () throws IOException {
 
+        /**
+         * Méthode write file instancie
+         * @param
+         */
+
         ListToTree list = new ListToTree ();
         Map<String, Integer> list2 = list.readFile ();
         FileWriter writer = new FileWriter ("results.out");
@@ -21,8 +26,6 @@ public class WriteFile {
             out.flush ();
         }
 
-
     }
-
 
 }
