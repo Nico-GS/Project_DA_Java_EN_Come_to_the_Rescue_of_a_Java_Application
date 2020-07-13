@@ -6,7 +6,6 @@ import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
     }
 
     @Override
-    public List<String> getSymptoms () throws FileError{
+    public List<String> getSymptoms () throws FileError {
         ArrayList<String> result = new ArrayList<> ();
 
         if (filepath != null) {

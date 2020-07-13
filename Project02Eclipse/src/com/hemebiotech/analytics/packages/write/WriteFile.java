@@ -19,7 +19,7 @@ public class WriteFile {
     public void write (Map<String, Long> list2) throws WriteError {
 
         try {
-            FileWriter writer = new FileWriter ("results.out");
+            FileWriter writer = new FileWriter ("results.out"); // en paramètre
             try (BufferedWriter out = new BufferedWriter (writer)) {
                 for (Map.Entry<String, Long> entry : list2.entrySet ()) {
                     out.write (entry.getKey () + " = " + entry.getValue () + "\n");

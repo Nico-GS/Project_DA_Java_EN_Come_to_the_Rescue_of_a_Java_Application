@@ -5,11 +5,11 @@ public class FileError extends Exception {
     // renommer
 
     public FileError () {
-        super("Erreur de lecture du fichier : vérifier le chemin");
+        super ("Erreur de lecture du fichier : vérifier le chemin");
     }
 
     public FileError (String message) {
-        super(message);
+        super (message);
     }
 
     public FileError (String message, Throwable cause) {
