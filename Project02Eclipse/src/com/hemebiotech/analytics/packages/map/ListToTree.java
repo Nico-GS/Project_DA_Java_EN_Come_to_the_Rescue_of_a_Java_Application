@@ -1,6 +1,6 @@
-package com.hemebiotech.analytics.Test.read;
+package com.hemebiotech.analytics.packages.map;
 
-import com.hemebiotech.analytics.ReadSymptomDataFromFile;
+import com.hemebiotech.analytics.packages.read.ReadSymptomDataFromFile;
 
 import java.util.*;
 import java.util.function.Function;
@@ -22,7 +22,7 @@ public class ListToTree {
         Map<String, Integer> symptomSort;
         List list = new ArrayList (symptom.getSymptoms ());
         symptomSort = (Map<String, Integer>)
-                list.stream().collect(Collectors.groupingBy(Function.identity (), Collectors.counting()));
+                list.stream().collect(Collectors.groupingBy(Function.identity (), TreeMap::new, Collectors.counting ()));
 
         
 

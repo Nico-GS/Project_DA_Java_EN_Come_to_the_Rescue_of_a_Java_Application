@@ -1,7 +1,7 @@
-package com.hemebiotech.analytics.Test;
+package com.hemebiotech.analytics.packages;
 
-import com.hemebiotech.analytics.Test.read.ListToTree;
-import com.hemebiotech.analytics.Test.write.WriteFile;
+import com.hemebiotech.analytics.packages.map.ListToTree;
+import com.hemebiotech.analytics.packages.write.WriteFile;
 
 import java.io.IOException;
 
