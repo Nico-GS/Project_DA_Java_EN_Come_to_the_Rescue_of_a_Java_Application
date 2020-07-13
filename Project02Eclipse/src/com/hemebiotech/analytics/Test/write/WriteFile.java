@@ -9,13 +9,7 @@ import java.util.Map;
 
 public class WriteFile {
 
-    // Write output file
     public void write () throws IOException {
-
-        /**
-         * Méthode write file instancie
-         * @param
-         */
 
         ListToTree list = new ListToTree ();
         Map<String, Integer> list2 = list.readFile ();
@@ -24,8 +18,7 @@ public class WriteFile {
         for (Map.Entry<String, Integer> entry : list2.entrySet ()) {
             out.write (entry.getKey () + " = " + entry.getValue () + " \n");
             out.flush ();
+
         }
-
     }
-
 }
