@@ -15,16 +15,15 @@ public class ListToTree {
      * @return symptomSort
      */
 
-    public Map<String, Integer> readFile ()  {
+    public Map<String, Long> readFile ()  {
 
         ReadSymptomDataFromFile symptom = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
 
-        Map<String, Integer> symptomSort;
-        List list = new ArrayList (symptom.getSymptoms ());
-        symptomSort = (Map<String, Integer>)
-                list.stream().collect(Collectors.groupingBy(Function.identity (), TreeMap::new, Collectors.counting ()));
-
-        
+        Map<String, Long> symptomSort;
+        List<String> list = new ArrayList<> (symptom.getSymptoms ());
+        symptomSort = (Map<String, Long>)
+                list.stream().collect(Collectors.groupingBy
+                        (Function.identity (), TreeMap::new, Collectors.counting ()));
 
         return symptomSort;
     }

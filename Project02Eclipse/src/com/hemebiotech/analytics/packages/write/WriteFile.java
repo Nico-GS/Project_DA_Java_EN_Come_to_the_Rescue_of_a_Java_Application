@@ -15,17 +15,18 @@ public class WriteFile {
      * alphabétique et nombres d'occurrences
      * @void write()
      */
-    public void write () throws IOException {
+    public void write () {
 
         try {
             ListToTree list = new ListToTree ();
-            Map<String, Integer> list2 = list.readFile ();
+            Map<String, Long> list2 = list.readFile ();
             FileWriter writer = new FileWriter ("results.out");
-            BufferedWriter out = new BufferedWriter (writer);
-            for (Map.Entry<String, Integer> entry : list2.entrySet ()) {
-                out.write (entry.getKey () + " = " + entry.getValue () + " \n");
-                out.flush ();
+            try (BufferedWriter out = new BufferedWriter (writer)) {
+                for (Map.Entry<String, Long> entry : list2.entrySet ()) {
+                    out.write (entry.getKey () + " = " + entry.getValue () + " \n");
+                    out.flush ();
 
+                }
             }
         } catch (IOException e) {
             e.printStackTrace ();
