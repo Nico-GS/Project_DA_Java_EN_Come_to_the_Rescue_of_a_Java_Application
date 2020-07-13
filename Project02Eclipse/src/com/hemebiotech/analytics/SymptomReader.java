@@ -1,5 +1,7 @@
 package com.hemebiotech.analytics;
 
+import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
+
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
