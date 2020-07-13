@@ -43,8 +43,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				throw new UncheckedIOException (e);
 			}
 		}
-
 		return result;
 	}
-
 }

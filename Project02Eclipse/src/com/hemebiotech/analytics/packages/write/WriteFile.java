@@ -9,6 +9,12 @@ import java.util.Map;
 
 public class WriteFile {
 
+
+    /**
+     * Méthode write instancie une TreeMap avec les symptomes par ordre
+     * alphabétique et nombres d'occurrences
+     * @void write()
+     */
     public void write () throws IOException {
 
         try {
