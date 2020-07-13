@@ -1,16 +1,16 @@
 package com.hemebiotech.analytics.packages;
 
-import com.hemebiotech.analytics.packages.map.ListToTree;
-import com.hemebiotech.analytics.packages.write.WriteFile;
+import com.hemebiotech.analytics.packages.controller.BiotechController;
+import com.hemebiotech.analytics.packages.exceptions.FileError;
+import com.hemebiotech.analytics.packages.exceptions.WriteError;
+
 
 public class MainAppTest {
 
-    public static void main (String[] args) {
+    public static void main (String[] args) throws FileError, WriteError {
 
-        ListToTree test = new ListToTree ();
-        System.out.println (test.readFile ());
-        WriteFile write = new WriteFile ();
-        write.write ();
+        BiotechController app = new BiotechController ();
+        app.run ();
 
     }
 }

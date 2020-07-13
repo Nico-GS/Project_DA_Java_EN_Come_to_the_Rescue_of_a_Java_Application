@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics.packages.map;
 
-import com.hemebiotech.analytics.packages.read.ReadSymptomDataFromFile;
 
 import java.util.*;
 import java.util.function.Function;
@@ -15,12 +14,9 @@ public class ListToTree {
      * @return symptomSort
      */
 
-    public Map<String, Long> readFile ()  {
-
-        ReadSymptomDataFromFile symptom = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
+    public Map<String, Long> sortLine (List<String> list)  {
 
         Map<String, Long> symptomSort;
-        List<String> list = new ArrayList<> (symptom.getSymptoms ());
         symptomSort =
                 list.stream().collect(Collectors.groupingBy
                         (Function.identity (), TreeMap::new, Collectors.counting ()));
