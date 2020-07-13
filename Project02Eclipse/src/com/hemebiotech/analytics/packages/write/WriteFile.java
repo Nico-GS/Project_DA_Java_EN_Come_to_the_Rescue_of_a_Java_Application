@@ -25,7 +25,6 @@ public class WriteFile {
                 for (Map.Entry<String, Long> entry : list2.entrySet ()) {
                     out.write (entry.getKey () + " = " + entry.getValue () + " \n");
                     out.flush ();
-
                 }
             }
         } catch (IOException e) {
