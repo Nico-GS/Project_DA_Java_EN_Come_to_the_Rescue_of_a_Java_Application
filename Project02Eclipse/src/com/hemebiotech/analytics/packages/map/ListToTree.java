@@ -21,7 +21,7 @@ public class ListToTree {
 
         Map<String, Long> symptomSort;
         List<String> list = new ArrayList<> (symptom.getSymptoms ());
-        symptomSort = (Map<String, Long>)
+        symptomSort =
                 list.stream().collect(Collectors.groupingBy
                         (Function.identity (), TreeMap::new, Collectors.counting ()));
 
