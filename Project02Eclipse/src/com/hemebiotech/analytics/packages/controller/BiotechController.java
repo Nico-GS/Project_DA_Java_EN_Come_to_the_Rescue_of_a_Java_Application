@@ -2,6 +2,7 @@ package com.hemebiotech.analytics.packages.controller;
 
 import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
+import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
 import com.hemebiotech.analytics.packages.map.ListToTree;
 import com.hemebiotech.analytics.packages.read.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.packages.write.WriteFile;
@@ -17,7 +18,7 @@ public class BiotechController {
         ISymptomReader symptom = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
         List<String> list = new ArrayList<> (symptom.getSymptoms ());
 
-        ListToTree toTree = new ListToTree ();
+        ISymptomWriter toTree =  new ListToTree ();
         Map<String, Long> list2 = toTree.sortLine (list);
         System.out.println (toTree.sortLine (list));
 

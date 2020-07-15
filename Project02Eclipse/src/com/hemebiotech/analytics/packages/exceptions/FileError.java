@@ -4,7 +4,8 @@ public class FileError extends ExceptionError {
 
     // renommer
 
-    public FileError () {
-        super ();
+    public FileError (String s) {
+        super();
+        System.out.println ("Erreur lecture fichier : vérifier le chemin");
     }
 }

@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics.packages.write;
 
-import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
 import com.hemebiotech.analytics.packages.exceptions.WriteError;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
 
@@ -9,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteFile implements ISymptomWriter {
+public class WriteFile  {
 
 
     /**
@@ -19,12 +18,7 @@ public class WriteFile implements ISymptomWriter {
      * @void write()
      */
 
-    @Override
-    public Map<String, Long> write () {
-        return null;
-    }
-
-    public void write (Map<String, Long> list2) throws ExceptionError {
+    public void write (Map<String, Long> list2) throws WriteError {
 
         try {
             FileWriter writer = new FileWriter ("results.out"); // en paramètre
@@ -35,7 +29,7 @@ public class WriteFile implements ISymptomWriter {
                 }
             }
         } catch (IOException e) {
-            throw new ExceptionError ();
+            throw new WriteError (e.getMessage ());
         }
 
     }

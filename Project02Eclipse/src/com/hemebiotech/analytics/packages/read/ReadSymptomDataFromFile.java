@@ -1,6 +1,6 @@
 package com.hemebiotech.analytics.packages.read;
 
-import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
+
 import com.hemebiotech.analytics.packages.exceptions.FileError;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
 
@@ -25,7 +25,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
     }
 
     @Override
-    public List<String> getSymptoms () throws ExceptionError {
+    public List<String> getSymptoms () throws FileError {
         ArrayList<String> result = new ArrayList<> ();
 
         if (filepath != null) {
@@ -38,7 +38,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
                     line = reader.readLine ();
                 }
             } catch (IOException e) {
-                throw new ExceptionError ();
+                throw new FileError (e.getMessage ());
             }
         }
         return result;

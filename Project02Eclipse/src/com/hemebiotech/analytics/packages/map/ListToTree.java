@@ -1,13 +1,15 @@
 package com.hemebiotech.analytics.packages.map;
 
 
+import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
+
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class ListToTree {
+public class ListToTree implements ISymptomWriter {
 
     /**
      * Méthode readFile instancie ReadSymptomDataFromFile, crée une TreeMap vide +

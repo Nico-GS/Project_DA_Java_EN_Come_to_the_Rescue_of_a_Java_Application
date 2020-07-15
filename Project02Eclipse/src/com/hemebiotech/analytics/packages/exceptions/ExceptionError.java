@@ -12,6 +12,4 @@ public class ExceptionError extends Exception {
     public ExceptionError (Throwable cause) {
         super (cause);
     }
-
-
 }
