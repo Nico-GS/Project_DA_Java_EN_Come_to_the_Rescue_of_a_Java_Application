@@ -1,10 +1,10 @@
 package com.hemebiotech.analytics.packages.exceptions;
 
-public class FileError extends ExceptionError {
+public class WrongPath extends ExceptionError {
 
     // renommer
 
-    public FileError (String s) {
+    public WrongPath () {
         super();
         System.out.println ("Erreur lecture fichier : vérifier le chemin");
     }

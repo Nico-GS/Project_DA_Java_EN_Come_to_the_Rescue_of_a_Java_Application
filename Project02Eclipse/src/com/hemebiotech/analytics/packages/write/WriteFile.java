@@ -1,7 +1,6 @@
 package com.hemebiotech.analytics.packages.write;
 
 import com.hemebiotech.analytics.packages.exceptions.WriteError;
-import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -29,7 +28,7 @@ public class WriteFile  {
                 }
             }
         } catch (IOException e) {
-            throw new WriteError (e.getMessage ());
+            throw new WriteError ();
         }
 
     }
