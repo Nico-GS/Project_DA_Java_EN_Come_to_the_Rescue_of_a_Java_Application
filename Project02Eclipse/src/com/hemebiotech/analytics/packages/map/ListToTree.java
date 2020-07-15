@@ -19,7 +19,7 @@ public class ListToTree {
 
     public Map<String, Long> sortLine (List<String> list) {
 
-       return list.stream ().collect (Collectors.groupingBy
+        return list.stream ().collect (Collectors.groupingBy
                 (Function.identity (), TreeMap::new, Collectors.counting ()));
     }
 }
