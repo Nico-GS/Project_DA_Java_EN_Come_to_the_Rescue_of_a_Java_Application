@@ -1,13 +1,11 @@
 package com.hemebiotech.analytics.packages;
 
 import com.hemebiotech.analytics.packages.controller.BiotechController;
-import com.hemebiotech.analytics.packages.exceptions.FileError;
-import com.hemebiotech.analytics.packages.exceptions.WriteError;
-
+import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
 
 public class MainAppTest {
 
-    public static void main (String[] args) throws FileError, WriteError {
+    public static void main (String[] args) throws ExceptionError {
 
         BiotechController app = new BiotechController ();
         app.run ();

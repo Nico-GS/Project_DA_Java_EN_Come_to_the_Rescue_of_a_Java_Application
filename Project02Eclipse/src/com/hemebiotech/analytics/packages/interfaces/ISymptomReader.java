@@ -1,6 +1,7 @@
 package com.hemebiotech.analytics.packages.interfaces;
 
-import com.hemebiotech.analytics.packages.exceptions.FileError;
+import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
+
 
 import java.util.List;
 
@@ -17,5 +18,5 @@ public interface ISymptomReader {
      *
      * @return a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
      */
-    List<String> getSymptoms () throws FileError;
+    List<String> getSymptoms () throws ExceptionError;
 }

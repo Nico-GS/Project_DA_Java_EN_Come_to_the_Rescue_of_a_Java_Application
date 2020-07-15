@@ -1,5 +1,6 @@
 package com.hemebiotech.analytics.packages.write;
 
+import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
 import com.hemebiotech.analytics.packages.exceptions.WriteError;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
 
@@ -23,7 +24,7 @@ public class WriteFile implements ISymptomWriter {
         return null;
     }
 
-    public void write (Map<String, Long> list2) throws WriteError {
+    public void write (Map<String, Long> list2) throws ExceptionError {
 
         try {
             FileWriter writer = new FileWriter ("results.out"); // en paramètre
@@ -34,7 +35,7 @@ public class WriteFile implements ISymptomWriter {
                 }
             }
         } catch (IOException e) {
-            throw new WriteError ();
+            throw new ExceptionError ();
         }
 
     }

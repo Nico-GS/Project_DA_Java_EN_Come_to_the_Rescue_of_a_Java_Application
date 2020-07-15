@@ -1,21 +1,10 @@
 package com.hemebiotech.analytics.packages.exceptions;
 
-public class WriteError extends Exception {
+public class WriteError extends ExceptionError {
 
     public WriteError () {
-        super ("Erreur lors de l'écriture du fichier");
+        super ();
     }
 
-    public WriteError (String message) {
-        super (message);
-    }
-
-    public WriteError (String message, Throwable cause) {
-        super (message, cause);
-    }
-
-    public WriteError (Throwable cause) {
-        super (cause);
-    }
 }
 

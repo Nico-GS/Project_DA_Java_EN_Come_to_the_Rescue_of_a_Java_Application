@@ -1,7 +1,6 @@
 package com.hemebiotech.analytics.packages.controller;
 
-import com.hemebiotech.analytics.packages.exceptions.FileError;
-import com.hemebiotech.analytics.packages.exceptions.WriteError;
+import com.hemebiotech.analytics.packages.exceptions.ExceptionError;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
 import com.hemebiotech.analytics.packages.map.ListToTree;
 import com.hemebiotech.analytics.packages.read.ReadSymptomDataFromFile;
@@ -13,7 +12,7 @@ import java.util.Map;
 
 public class BiotechController {
 
-    public void run () throws FileError, WriteError {
+    public void run () throws ExceptionError {
 
         ISymptomReader symptom = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
         List<String> list = new ArrayList<> (symptom.getSymptoms ());
