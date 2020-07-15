@@ -10,5 +10,12 @@ public class WriteError extends Exception {
         super (message);
     }
 
+    public WriteError (String message, Throwable cause) {
+        super (message, cause);
+    }
+
+    public WriteError (Throwable cause) {
+        super (cause);
+    }
 }
 

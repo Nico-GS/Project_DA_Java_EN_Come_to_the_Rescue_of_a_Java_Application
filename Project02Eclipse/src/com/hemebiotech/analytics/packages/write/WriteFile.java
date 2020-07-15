@@ -1,13 +1,14 @@
 package com.hemebiotech.analytics.packages.write;
 
 import com.hemebiotech.analytics.packages.exceptions.WriteError;
+import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteFile {
+public class WriteFile implements ISymptomWriter {
 
 
     /**
@@ -16,6 +17,12 @@ public class WriteFile {
      *
      * @void write()
      */
+
+    @Override
+    public Map<String, Long> write () {
+        return null;
+    }
+
     public void write (Map<String, Long> list2) throws WriteError {
 
         try {
@@ -31,4 +38,6 @@ public class WriteFile {
         }
 
     }
+
+
 }
