@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteFile  {
+public class WriteFile {
 
 
     /**
@@ -18,6 +18,10 @@ public class WriteFile  {
      */
     private final String pathToWrite;
 
+
+    /**
+     * @param pathToWrite chemin et nom du fichier de sortie
+     */
     public WriteFile (String pathToWrite) {
         this.pathToWrite = pathToWrite;
     }
@@ -35,8 +39,5 @@ public class WriteFile  {
         } catch (IOException e) {
             throw new WriteError ();
         }
-
     }
-
-
 }

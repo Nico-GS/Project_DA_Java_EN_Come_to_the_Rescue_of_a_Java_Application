@@ -5,7 +5,7 @@ public class WrongPath extends ExceptionError {
     // renommer
 
     public WrongPath () {
-        super();
+        super ();
         System.out.println ("Erreur lecture fichier : vérifier le chemin");
     }
 }
