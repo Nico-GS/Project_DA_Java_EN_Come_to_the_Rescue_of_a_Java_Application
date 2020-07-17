@@ -15,14 +15,14 @@ public class BiotechController {
 
     public void run () throws ExceptionError {
 
-        ISymptomReader symptomFromFile = new ReadSymptomDataFromFile ("Project02Eclipse\\symptms.txt");
+        ISymptomReader symptomFromFile = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
         List<String> listSymptom = new ArrayList<> (symptomFromFile.getSymptoms ());
 
         ISymptomWriter symptomToMap =  new ListToTree ();
         Map<String, Long> mapSymptom = symptomToMap.sortLine (listSymptom);
         System.out.println (symptomToMap.sortLine (listSymptom));
 
-        WriteFile write = new WriteFile ();
+        WriteFile write = new WriteFile ("results.out");
         write.write (mapSymptom);
     }
 

@@ -16,11 +16,16 @@ public class WriteFile  {
      *
      * @void write()
      */
+    private final String pathToWrite;
+
+    public WriteFile (String pathToWrite) {
+        this.pathToWrite = pathToWrite;
+    }
 
     public void write (Map<String, Long> list2) throws WriteError {
 
         try {
-            FileWriter writer = new FileWriter ("results.out"); // en paramètre
+            FileWriter writer = new FileWriter (pathToWrite);
             try (BufferedWriter out = new BufferedWriter (writer)) {
                 for (Map.Entry<String, Long> entry : list2.entrySet ()) {
                     out.write (entry.getKey () + " = " + entry.getValue () + "\n");
