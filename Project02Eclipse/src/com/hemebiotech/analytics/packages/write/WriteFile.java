@@ -9,15 +9,7 @@ import java.util.Map;
 
 public class WriteFile {
 
-
-    /**
-     * Méthode write instancie une TreeMap avec les symptomes par ordre
-     * alphabétique et nombres d'occurrences
-     *
-     * @void write()
-     */
     private final String pathToWrite;
-
 
     /**
      * @param pathToWrite chemin et nom du fichier de sortie
@@ -25,6 +17,13 @@ public class WriteFile {
     public WriteFile (String pathToWrite) {
         this.pathToWrite = pathToWrite;
     }
+
+    /**
+     * Méthode write instancie une TreeMap avec les symptomes par ordre
+     * alphabétique et nombres d'occurrences
+     *
+     * @void write()
+     */
 
     public void write (Map<String, Long> list2) throws WriteError {
 
