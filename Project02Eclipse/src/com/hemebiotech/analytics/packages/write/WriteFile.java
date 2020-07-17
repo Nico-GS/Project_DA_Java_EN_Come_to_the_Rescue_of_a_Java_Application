@@ -29,11 +29,11 @@ public class WriteFile implements ISymptomWriter {
     public void write (Map<String, Long> list2) throws WriteError {
 
         try (FileWriter writer = new FileWriter (pathToWrite);
-            BufferedWriter out = new BufferedWriter (writer) ) {
-                for (Map.Entry<String, Long> entry : list2.entrySet ()) {
-                    out.write (entry.getKey () + " = " + entry.getValue () + "\n");
-                    out.flush ();
-                }
+             BufferedWriter out = new BufferedWriter (writer)) {
+            for (Map.Entry<String, Long> entry : list2.entrySet ()) {
+                out.write (entry.getKey () + " = " + entry.getValue () + "\n");
+                out.flush ();
+            }
         } catch (IOException e) {
             throw new WriteError ("Erreur écriture fichier", e);
         }

@@ -1,8 +1,6 @@
 package com.hemebiotech.analytics.packages.map;
 
 
-import com.hemebiotech.analytics.packages.interfaces.ISymptomWriter;
-
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
