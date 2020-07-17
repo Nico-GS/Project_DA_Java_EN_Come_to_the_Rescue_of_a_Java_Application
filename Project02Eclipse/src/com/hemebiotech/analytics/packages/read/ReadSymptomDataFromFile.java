@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics.packages.read;
 
-
 import com.hemebiotech.analytics.packages.exceptions.WrongPath;
 import com.hemebiotech.analytics.packages.interfaces.ISymptomReader;
 
