@@ -19,8 +19,8 @@ public class BiotechController {
         List<String> listSymptom = new ArrayList<> (symptomFromFile.getSymptoms ());
 
         ISymptomWriter symptomToMap = new SymptomMap ();
-        Map<String, Long> mapSymptom = symptomToMap.sortLine (listSymptom);
-        System.out.println (symptomToMap.sortLine (listSymptom));
+        Map<String, Long> mapSymptom = symptomToMap.toMap (listSymptom);
+        System.out.println (symptomToMap.toMap (listSymptom));
 
         WriteFile write = new WriteFile ("results.out");
         write.write (mapSymptom);

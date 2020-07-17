@@ -4,12 +4,10 @@ import java.util.List;
 import java.util.Map;
 
 public interface ISymptomWriter {
-
-
     /**
-     * @param list
+     * @param list Symptom
      * @return Map vide qui contiendra la liste des symptomes avec
      * leurs occurrences
      */
-    Map<String, Long> sortLine (List<String> list);
+    Map<String, Long> toMap (List<String> list);
 }

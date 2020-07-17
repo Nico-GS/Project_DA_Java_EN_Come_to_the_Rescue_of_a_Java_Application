@@ -19,7 +19,7 @@ public class SymptomMap implements ISymptomWriter {
      * @return symptomSort
      */
 
-    public Map<String, Long> sortLine (List<String> list) {
+    public Map<String, Long> toMap (List<String> list) {
 
         return list.stream ().collect (Collectors.groupingBy
                 (Function.identity (), TreeMap::new, Collectors.counting ()));
