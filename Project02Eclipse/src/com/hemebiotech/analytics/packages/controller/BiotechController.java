@@ -18,12 +18,11 @@ public class BiotechController {
         ISymptomReader symptomFromFile = new ReadSymptomDataFromFile ("Project02Eclipse\\symptoms.txt");
         List<String> listSymptom = new ArrayList<> (symptomFromFile.getSymptoms ());
 
-        ISymptomWriter symptomToMap = new SymptomMap ();
+        SymptomMap symptomToMap = new SymptomMap ();
         Map<String, Long> mapSymptom = symptomToMap.toMap (listSymptom);
         System.out.println (symptomToMap.toMap (listSymptom));
 
-        WriteFile write = new WriteFile ("results.out");
+        ISymptomWriter write = new WriteFile ("results.out");
         write.write (mapSymptom);
     }
-
 }

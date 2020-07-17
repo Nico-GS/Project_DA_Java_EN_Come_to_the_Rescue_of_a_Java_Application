@@ -9,6 +9,5 @@ public class MainAppTest {
 
         BiotechController app = new BiotechController ();
         app.run ();
-
     }
 }

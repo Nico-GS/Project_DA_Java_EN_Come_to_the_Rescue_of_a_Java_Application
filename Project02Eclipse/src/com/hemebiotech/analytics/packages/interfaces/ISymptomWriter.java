@@ -1,13 +1,14 @@
 package com.hemebiotech.analytics.packages.interfaces;
 
+import com.hemebiotech.analytics.packages.exceptions.WriteError;
+
 import java.util.List;
 import java.util.Map;
 
 public interface ISymptomWriter {
     /**
-     * @param list Symptom
-     * @return Map vide qui contiendra la liste des symptomes avec
-     * leurs occurrences
+     * @param
+     * @return Ecriture de la map dans un fichier de sortie
      */
-    Map<String, Long> toMap (List<String> list);
+    void write (Map<String, Long> list) throws WriteError;
 }

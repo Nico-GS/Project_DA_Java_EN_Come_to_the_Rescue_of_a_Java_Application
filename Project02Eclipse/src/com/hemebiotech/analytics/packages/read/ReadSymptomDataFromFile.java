@@ -25,7 +25,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
     @Override
     public List<String> getSymptoms () throws WrongPath {
-        ArrayList<String> result = new ArrayList<> ();
+        List<String> result = new ArrayList<> ();
 
         if (filepath != null) {
 
@@ -37,7 +37,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
                     line = reader.readLine ();
                 }
             } catch (IOException e) {
-                throw new WrongPath ();
+                throw new WrongPath ("Erreur de lecture fichier", e);
             }
         }
         return result;
