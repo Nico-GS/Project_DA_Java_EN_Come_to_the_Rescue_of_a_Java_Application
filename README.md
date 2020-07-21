@@ -7,7 +7,7 @@ hemebiotech Symptoms
 <b>MainApp</b>
 <br><br>
 <b>Controller</b>
-<li>controller</li>
+<li>BiotechController</li>
 <br>
 <b>Exceptions</b>
 <li>ExceptionError</li>
