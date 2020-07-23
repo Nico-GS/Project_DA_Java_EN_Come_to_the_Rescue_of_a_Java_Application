@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class SymptomMap {
 
     /**
-     * Méthode readFile instancie ReadSymptomDataFromFile, crée une TreeMap vide +
+     * Méthode toMap instancie ReadSymptomDataFromFile, crée une TreeMap vide +
      * une list de "symptom" et converti tout ça en TreeMap avec la liste des symptomes
      * et leurs nombres d'occurrences
      *
