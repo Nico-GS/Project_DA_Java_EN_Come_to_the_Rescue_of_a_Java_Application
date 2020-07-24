@@ -11,10 +11,10 @@ public class SymptomMap {
 
     /**
      * Méthode toMap instancie ReadSymptomDataFromFile, crée une TreeMap vide +
-     * une list de "symptom" et converti tout ça en TreeMap avec la liste des symptomes
+     * une list de "symptom" et converti tout ça en TreeMap avec la liste des symptômes
      * et leurs nombres d'occurrences
      *
-     * @return symptomSort
+     * @return toMap
      */
 
     public Map<String, Long> toMap (List<String> list) {
