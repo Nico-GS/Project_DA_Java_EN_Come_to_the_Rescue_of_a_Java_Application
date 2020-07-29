@@ -8,23 +8,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+
 public class WriteFile implements ISymptomWriter {
 
     private final String pathToWrite;
 
     /**
-     * @param pathToWrite chemin et nom du fichier de sortie
+     * Instantiates a new Write file.
+     *
+     * @param pathToWrite path and name for the output file
      */
     public WriteFile (String pathToWrite) {
         this.pathToWrite = pathToWrite;
     }
 
-    /**
-     * Méthode write instancie une TreeMap avec les symptomes par ordre
-     * alphabétique et nombres d'occurrences
-     *
-     * @void write()
-     */
+
     @Override
     public void write (Map<String, Long> list2) throws WriteError {
 
