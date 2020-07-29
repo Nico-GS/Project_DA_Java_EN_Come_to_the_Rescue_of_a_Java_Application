@@ -9,14 +9,13 @@ import java.util.stream.Collectors;
 
 public class SymptomMap {
 
-    /**
-     * Méthode toMap instancie ReadSymptomDataFromFile, crée une TreeMap vide +
-     * une list de "symptom" et converti tout ça en TreeMap avec la liste des symptômes
-     * et leurs nombres d'occurrences
-     *
-     * @return toMap
-     */
 
+    /**
+     * Takes a Map as a parameter and returns it as a TreeMap
+     *
+     * @param list the list
+     * @return TreeMap with symptoms + occurrences, sorted
+     */
     public Map<String, Long> toMap (List<String> list) {
 
         return list.stream ().collect (Collectors.groupingBy
