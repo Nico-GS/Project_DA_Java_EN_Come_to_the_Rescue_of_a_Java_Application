@@ -25,7 +25,7 @@ public class WriteFile implements ISymptomWriter {
      *
      * @void write()
      */
-
+    @Override
     public void write (Map<String, Long> list2) throws WriteError {
 
         try (FileWriter writer = new FileWriter (pathToWrite);
